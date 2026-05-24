@@ -8,7 +8,7 @@
 
 ## Live Demo
 
-> Deploy link: `https://neuralbtc.vercel.app` *(after deployment)*
+Deploy link: https://neural-btc-sj2z.vercel.app/
 
 ---
 
