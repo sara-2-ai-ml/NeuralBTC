@@ -12,6 +12,20 @@ Deploy link: https://neural-btc-sj2z.vercel.app/
 
 ---
 
+## Training Notebook
+
+The full model training pipeline is available in
+ https://colab.research.google.com/drive/1BV4sp8s01M6wvDXR65AvvvNR0fVADX_u#scrollTo=I6b_v3NPVnYU
+
+The notebook covers the complete journey from raw Binance data to a production-ready model:
+
+- Data collection and preprocessing (55,457 hourly candles, Jan 2020 → Apr 2026)
+- Feature engineering (12 engineered features including cyclical time encoding)
+- Baseline GRU model achieving 98% accuracy
+- Step-by-step improvements: RobustScaler, log-return target, MAPE-Huber loss
+- Final model: **MAPE 0.30% — Accuracy 99.70% — MAE $276.93**
+- Architecture experiments: GRU v2 with Residual Connections + MultiHeadAttention
+
 ## Overview
 
 The system is built around a **multi-agent architecture** where three independent agents analyze the market from different perspectives, and an AI orchestrator (Claude Sonnet) synthesizes their signals into a final BUY / SELL / HOLD decision with confidence scoring and risk assessment.
