@@ -29,7 +29,7 @@ interface Prediction {
 
 // ─── Constants ────────────────────────────────────────────────────────────────
 
-const API_BASE   = "http://127.0.0.1:8000"
+const API_BASE = process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000"
 const BG         = "#0d0d0d"
 const GRID       = "#1a1a1a"
 const TEXT       = "#9b9b9b"

@@ -13,6 +13,8 @@ import { HowItWorks } from "@/components/dashboard/how-it-works"
 import { TechnicalDetails } from "@/components/dashboard/technical-details"
 import { Footer } from "@/components/dashboard/footer"
 
+const API_BASE = process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000"
+
 const initialData = {
   currentPrice: 0,
   predictedPrice: 0,
@@ -70,7 +72,7 @@ export default function DashboardPage() {
     setIsLoading(true)
     setError(null)
     try {
-      const response = await fetch('http://127.0.0.1:8000/api/analyze')
+      const response = await fetch(`${API_BASE}/api/analyze`)
       if (!response.ok) throw new Error(`API error: ${response.status}`)
       const data = await response.json()
       setDashboardData(data)
@@ -85,11 +87,7 @@ export default function DashboardPage() {
   return (
     <main className="min-h-screen gradient-bg">
       <Header />
-
-      <Hero
-        onRunAnalysis={handleRunAnalysis}
-        isLoading={isLoading}
-      />
+      <Hero onRunAnalysis={handleRunAnalysis} isLoading={isLoading} />
 
       {error && (
         <div className="max-w-7xl mx-auto px-4 py-2">
@@ -148,9 +146,7 @@ export default function DashboardPage() {
       </div>
 
       <FinalDecision {...dashboardData.finalDecision} />
-
       <TechnicalDetails {...dashboardData.technicalDetails} />
-
       <Footer />
     </main>
   )
