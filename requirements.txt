@@ -10,3 +10,5 @@ python-dotenv
 anthropic
 newsapi-python
 ta
+groq
+anthropic
