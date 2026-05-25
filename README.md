@@ -11,6 +11,13 @@
 Deploy link: https://neural-btc-sj2z.vercel.app/
 
 ---
+## Screenshots
+
+![Hero](Screenshot 2026-05-25 015733.png)
+![How it works](Screenshot 2026-05-25 015748.png)
+![Chart](Screenshot 2026-05-25 015807.png)
+![Analysis](Screenshot 2026-05-25 015839.png)
+![Decision](Screenshot 2026-05-25 015849.png)
 
 ## Training Notebook
 
