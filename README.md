@@ -274,7 +274,7 @@ This project is for educational and research purposes only. It does not constitu
 
 ## Author
 
-Built by Sara Resulaj — connecting deep learning, financial engineering, and modern full-stack development.
+Built by S.R  — connecting deep learning, financial engineering, and modern full-stack development.
 
 *If you found this project interesting, feel free to connect on LinkedIn.*
 
